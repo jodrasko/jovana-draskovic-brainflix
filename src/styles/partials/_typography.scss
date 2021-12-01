@@ -1,0 +1,21 @@
+// Avenir Next regular
+@font-face {
+  font-family: "Avenir-Next";
+  src: url("../../assets/fonts/avenir-next-ltpro-fonts/AvenirNextLTPro-Regular.woff2")
+      format("woff2"),
+    url("../../assets/fonts/avenir-next-ltpro-fonts/AvenirNextLTPro-Regular.woff")
+      format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+// Avenir Next bold
+@font-face {
+  font-family: "Avenir-Next";
+  src: url("../../assets/fonts/avenir-next-ltpro-fonts/AvenirNextLTPro-Bold.woff2")
+      format("woff2"),
+    url("../../assets/fonts/avenir-next-ltpro-fonts/AvenirNextLTPro-Bold.woff")
+      format("woff");
+  font-weight: 700;
+  font-style: normal;
+}

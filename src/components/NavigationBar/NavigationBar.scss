@@ -1,0 +1,20 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+
+.main-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-between;
+
+  //include tablet
+  //include desktop
+
+  &__logo {
+    max-width: 120px;
+    max-height: 25px;
+  }
+}

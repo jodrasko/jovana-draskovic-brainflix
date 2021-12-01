@@ -1,0 +1,16 @@
+@use "./colors" as *;
+@use "./variables" as *;
+@use "./mixins" as *;
+@use "./typography" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $white;
+  margin: 0;
+  font-family: "Avenir-Next";
+}
