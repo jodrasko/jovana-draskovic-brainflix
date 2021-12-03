@@ -1,0 +1,18 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+
+.video {
+  margin: 1rem 0 1.5rem 0;
+  background-color: $brainflix-darkblack;
+  position: relative;
+
+  &__player {
+    // @include ar {
+    width: 100%;
+    height: auto;
+    // }
+  }
+}

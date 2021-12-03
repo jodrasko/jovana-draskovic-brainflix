@@ -14,3 +14,9 @@
     @content;
   }
 }
+
+@mixin ar {
+  @media (aspect-ratio: 16/9) {
+    @content;
+  }
+}
