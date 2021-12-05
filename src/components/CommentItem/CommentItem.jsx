@@ -32,12 +32,6 @@ const CommentItem = (props) => {
   }
 
   return (
-    // <li className="plant-nav-item">
-    //   <button className="plant-nav-item__link" onClick={handlePlantSelect}>{
-    //     props.name}
-    //   </button>
-    // </li>
-
     <article class="comment__article">
       <div class="comment__avatar"></div>
       <div class="comment__card">

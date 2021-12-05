@@ -1,0 +1,22 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+
+.next-video {
+  margin: 1rem;
+
+  &__heading {
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 700;
+    color: $silver;
+    text-align: left;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+}
