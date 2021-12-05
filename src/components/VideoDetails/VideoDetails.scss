@@ -1,0 +1,108 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+
+.details {
+  margin: 1rem;
+  text-align: left;
+
+  @include tablet {
+    margin: 2.5rem;
+  }
+
+  @include desktop {
+    margin: 2.5rem;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 33px;
+
+    @include tablet {
+      font-size: 33px;
+      font-weight: 700;
+      line-height: 44px;
+      margin: 0;
+    }
+  }
+
+  &__data {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-top: 1px solid $mercury;
+    border-bottom: 1px solid $mercury;
+
+    @include tablet {
+      justify-content: space-between;
+      align-items: flex-end;
+      border-top: none;
+    }
+
+    @include desktop {
+      justify-content: space-between;
+      align-items: flex-end;
+      border-top: none;
+    }
+  }
+
+  &__left {
+    display: flex;
+    margin: 1rem 0 1rem 0;
+    flex-direction: column;
+    @include tablet {
+      flex-direction: row;
+      margin: 0;
+    }
+
+    @include desktop {
+      flex-direction: row;
+      margin: 0;
+    }
+  }
+
+  &__right {
+    display: flex;
+    margin-left: 40px;
+    flex-direction: column;
+    @include tablet {
+      flex-direction: row;
+    }
+
+    @include desktop {
+      flex-direction: row;
+    }
+  }
+
+  &__channel {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 18px;
+    margin: 0 2rem 1rem 0;
+
+    @include tablet {
+      margin: 0 2rem 1rem 0;
+    }
+
+    @include desktop {
+      margin: 0 2rem 1rem 0;
+    }
+  }
+
+  &__date {
+    color: $silver;
+  }
+
+  &__description {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+    color: $brainflix-black;
+  }
+}
+
+//border-top: 1px solid $mercury;
+//border-bottom: 1px solid $mercury;

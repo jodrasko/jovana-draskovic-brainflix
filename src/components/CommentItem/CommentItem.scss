@@ -21,7 +21,7 @@
     padding: 1rem 0 1rem 0;
     width: 290px;
     @include tablet {
-      width: 490px;
+      width: 100%;
     }
   }
 
@@ -40,6 +40,7 @@
     border-radius: 50%;
 
     background-color: $mercury;
+    margin-top: 5px;
   }
 
   &__card {

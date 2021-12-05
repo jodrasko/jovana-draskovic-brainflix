@@ -21,12 +21,14 @@ function CommentForm() {
               id="comment"
               minlength="2"
               maxlength="200"
-              rows="5"
               placeholder="Add a new comment"
+              className="comment-form__textarea"
             ></textarea>
           </div>
           <div class="comment-form__button-container">
-            <button type="submit">COMMENT</button>
+            <button type="submit" className="comment-form__button">
+              COMMENT
+            </button>
           </div>
         </form>
       </div>
