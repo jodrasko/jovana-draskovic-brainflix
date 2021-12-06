@@ -6,14 +6,8 @@ import "./CommentItem.scss";
 //     "likes": 0,
 //     "timestamp": 1628522461000
 //   },
-
 const CommentItem = (props) => {
   const item = props.comment;
-
-  //   const handlePlantSelect = e => {
-  //     e.preventDefault();
-  //     props.onPlantSelect(props.id);
-  //   }
 
   function newDate(timestamp) {
     return new Date(timestamp);

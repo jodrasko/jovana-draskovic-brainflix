@@ -2,7 +2,6 @@ import "./VideoDetails.scss";
 import Views from "../../assets/images/Icons/views.svg";
 import Likes from "../../assets/images/Icons/likes.svg";
 import UserImpression from "../../components/UserImpression/UserImpression";
-// import UploadForm from "../UploadForm/UploadForm";
 
 // {
 //     "title": "BMX Rampage: 2021 Highlights",
@@ -23,7 +22,7 @@ import UserImpression from "../../components/UserImpression/UserImpression";
 //       },
 
 function VideoDetails(props) {
-  const detail = props.detail; // detail is a keyword for one object from the video-details.json file.
+  const detail = props.detail;
 
   function newDate(timestamp) {
     return new Date(timestamp);
@@ -42,17 +41,6 @@ function VideoDetails(props) {
   }
 
   return (
-    // <header className="main-header">
-    //   <div>
-    //     <img
-    //       src={BrainFlixLogo}
-    //       alt="brainflix logo"
-    //       className="main-header__logo"
-    //     />
-    //   </div>
-    //   <UploadForm />
-    // </header>
-
     <section className="details">
       <h1 className="details__title">{detail.title}</h1>
       <div className="details__data">
@@ -77,6 +65,7 @@ function VideoDetails(props) {
         </div>
       </div>
       <p className="details__description">{detail.description}</p>
+      <h3 class="details__heading">{detail.comments.length} Comments</h3>
     </section>
   );
 }

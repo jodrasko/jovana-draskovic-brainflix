@@ -6,7 +6,7 @@
 
 .conversation {
   background-color: $white;
-  padding: 1rem 1rem 0 1rem;
+  padding: 0 1rem 0 1rem;
 
   @include tablet {
     margin: 0 2.5rem 0 2.5rem;
@@ -14,30 +14,8 @@
   }
 
   @include desktop {
-    margin: 0 2.5rem 0 2.5rem;
+    margin: 0 1.5rem 0 0;
     padding: 0;
-  }
-
-  &__heading {
-    font-size: 13px;
-    line-height: 18px;
-    font-weight: 700;
-    margin: 8px 8px 8px 0;
-    text-align: left;
-
-    @include tablet {
-      font-size: 14px;
-      line-height: 22px;
-      font-weight: 700;
-      margin: 0;
-    }
-
-    @include desktop {
-      font-size: 14px;
-      line-height: 22px;
-      font-weight: 700;
-      margin: 1rem 0 1rem 6.5rem;
-    }
   }
 
   &__container {
@@ -73,7 +51,7 @@
 
     background-color: $mercury;
 
-    margin-bottom: 5.5rem;
+    margin-bottom: 2rem;
     @include tablet {
       margin-bottom: 1rem;
     }
@@ -87,14 +65,12 @@
 
   @include tablet {
     flex-direction: row;
-    flex-grow: 3;
     justify-content: space-between;
     align-items: flex-end;
   }
 
   @include desktop {
     flex-direction: row;
-    flex-grow: 0;
     justify-content: space-between;
     align-items: flex-end;
   }
@@ -109,7 +85,11 @@
     text-align: left;
 
     @include tablet {
+      flex-grow: 3;
       font-size: 12px;
+    }
+    @include desktop {
+      flex-grow: 3;
     }
   }
 
@@ -120,62 +100,57 @@
     flex-direction: column;
 
     @include tablet {
-      width: 460px;
+      flex-grow: 2;
       margin: 1rem 0 1rem 1rem;
     }
 
-    &__textarea {
-      font-family: "Avenir-Next";
-      background: $alabaster;
+    @include desktop {
+      flex-grow: 2;
+      margin: 1rem 1rem 1rem 1rem;
+    }
+  }
 
-      width: 100%;
-      border-radius: 4px;
-      border: 1px solid $silver;
-      // min-height: 2.25rem;
-      padding: 0.75rem;
+  &__text {
+    font-family: "Avenir-Next";
+    background: $alabaster;
 
-      @include tablet {
-        height: 60px;
-        padding: 1rem;
-      }
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid $silver;
+    padding: 0.75rem;
 
-      @include desktop {
-        height: 40px;
-        padding: 1rem;
-      }
+    @include tablet {
+      height: 40px;
+      padding: 0.5rem 1.5rem 1rem 1rem;
     }
 
-    &__textarea:focus::after {
-      border: 1px solid $brainflix-black;
+    @include desktop {
+      height: 40px;
+      padding: 0.5rem 1.5rem 1rem 1rem;
     }
 
-    // &__textarea:valid {
-    //   border: 1px solid $mercury;
-    // }
+    :valid {
+      border: 1px solid $mercury;
+    }
+  }
 
-    // &__textarea:invalid {
-    //   border: 1px solid #d22d2d;
-    // }
+  textarea::placeholder {
+    font-family: "Avenir-Next";
+    color: $brainflix-black;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
 
-    ::placeholder {
-      font-family: "Avenir-Next";
-      color: $brainflix-black;
+    @include tablet {
       font-weight: 400;
-      font-size: 13px;
-      line-height: 18px;
+      font-size: 14px;
+      line-height: 22px;
+    }
 
-      @include tablet {
-        padding: 0.2rem 0 0 1rem;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 22px;
-      }
-
-      @include desktop {
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 22px;
-      }
+    @include desktop {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
     }
   }
 

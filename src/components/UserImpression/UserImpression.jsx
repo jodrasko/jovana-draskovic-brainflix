@@ -1,6 +1,4 @@
-// import BrainFlixLogo from "../../assets/images/logo/BrainFlix-logo.svg";
 import "./UserImpression.scss";
-// import UploadForm from "../UploadForm/UploadForm";
 
 function UserImpression(props) {
   return (

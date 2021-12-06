@@ -4,15 +4,26 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/typography" as *;
 
-.video {
-  margin: 1rem 0 1.5rem 0;
-  background-color: $brainflix-darkblack;
-  position: relative;
+@media (max-aspect-ratio: 16/9) {
+  .video {
+    display: flex;
+    margin: 1rem 0 1.5rem 0;
+    background-color: $brainflix-darkblack;
+    position: relative;
 
-  &__player {
-    // @include ar {
-    width: 100%;
-    height: auto;
-    // }
+    @include tablet {
+      margin: 0;
+      padding: 0 40px 0 40px;
+    }
+
+    @include desktop {
+      margin: 0;
+      padding: 0 80px 0 80px;
+    }
+
+    &__player {
+      width: 100%;
+      height: auto;
+    }
   }
 }

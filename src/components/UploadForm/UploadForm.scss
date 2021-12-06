@@ -12,19 +12,17 @@
       justify-content: space-between;
       align-items: center;
     }
-
-    @include desktop {
-    }
   }
 
   &__form {
     @include tablet {
       display: flex;
       flex-direction: row;
-      padding: 1rem;
+      padding: 1rem 1rem 0 1rem;
     }
 
     @include desktop {
+      padding: 1rem 1rem 0 1rem;
     }
   }
 

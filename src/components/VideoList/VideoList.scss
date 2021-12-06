@@ -13,7 +13,11 @@
     font-weight: 700;
     color: $silver;
     text-align: left;
+    @include desktop {
+      margin-top: 2rem;
+    }
   }
+
   &__list {
     display: flex;
     flex-direction: column;
