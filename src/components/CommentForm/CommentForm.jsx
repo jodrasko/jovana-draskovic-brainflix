@@ -2,13 +2,13 @@ import "./CommentForm.scss";
 
 function CommentForm() {
   return (
-    <section class="conversation">
-      <div class="conversation__container">
-        <div class="conversation__avatar"></div>
+    <section className="conversation">
+      <div className="conversation__container">
+        <div className="conversation__avatar"></div>
 
-        <form class="comment-form">
-          <div class="comment-form__input-container">
-            <label class="comment-form__label" for="commentText">
+        <form className="comment-form">
+          <div className="comment-form__input-container">
+            <label className="comment-form__label" htmlFor="commentText">
               JOIN THE CONVERSATION
             </label>
             <textarea
@@ -18,7 +18,7 @@ function CommentForm() {
               className="comment-form__text"
             ></textarea>
           </div>
-          <div class="comment-form__button-container">
+          <div className="comment-form__button-container">
             <button type="submit" className="comment-form__button">
               COMMENT
             </button>

@@ -65,7 +65,7 @@ function VideoDetails(props) {
         </div>
       </div>
       <p className="details__description">{detail.description}</p>
-      <h3 class="details__heading">{detail.comments.length} Comments</h3>
+      <h3 className="details__heading">{detail.comments.length} Comments</h3>
     </section>
   );
 }

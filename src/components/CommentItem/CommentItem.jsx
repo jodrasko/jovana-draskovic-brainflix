@@ -26,16 +26,16 @@ const CommentItem = (props) => {
   }
 
   return (
-    <article class="comment__article">
-      <div class="comment__avatar"></div>
-      <div class="comment__card">
-        <div class="comment__heading">
-          <h3 class="comment__label">{item.name}</h3>
-          <span class="comment__value">
+    <article className="comment__article">
+      <div className="comment__avatar"></div>
+      <div className="comment__card">
+        <div className="comment__heading">
+          <h3 className="comment__label">{item.name}</h3>
+          <span className="comment__value">
             {getFormattedDate(newDate(item.timestamp))}
           </span>
         </div>
-        <p class="comment__text">{item.comment}</p>
+        <p className="comment__text">{item.comment}</p>
       </div>
     </article>
   );

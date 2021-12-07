@@ -22,6 +22,8 @@ class MainPage extends Component {
   };
 
   render() {
+    console.log("MainPage Props:", this.props);
+
     const nextVideos = videoData.filter(
       (video) => video.id !== this.state.selectedVideo.id
     );

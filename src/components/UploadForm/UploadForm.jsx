@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./UploadForm.scss";
 
 function UploadForm() {
@@ -9,13 +10,14 @@ function UploadForm() {
           type="text"
           name="userName"
           id="name"
-          minlength="2"
-          maxlength="30"
+          minLength="2"
+          maxLength="30"
           placeholder="Search"
         />
 
         <div className="uploadform__box">
           <div className="uploadform__avatar"></div>
+          <Link to="/video-upload">Video Upload Page</Link>
           <button type="submit" className="uploadform__button">
             UPLOAD
           </button>
