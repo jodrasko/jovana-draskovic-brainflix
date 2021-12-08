@@ -15,6 +15,20 @@ class MainPage extends Component {
     selectedVideo: detailsData[0] // video-details.json
   };
 
+  componentDidUpdate(prevProps, prevState) {
+    if (this.props !== prevProps) {
+      const currentVideoId = this.props.match.params.videoId;
+      console.log("[MainPage] currentVideoId=", currentVideoId);
+      let currentVideo = detailsData[0];
+      if (currentVideoId) {
+        currentVideo = detailsData.find((video) => video.id === currentVideoId);
+      }
+      this.setState({
+        selectedVideo: currentVideo
+      });
+    }
+  }
+
   handleVideoSelect = (id) => {
     this.setState({
       selectedVideo: detailsData.find((video) => video.id === id)

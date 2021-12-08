@@ -26,6 +26,10 @@
     }
   }
 
+  &__button-container {
+    width: 100%;
+  }
+
   &__button {
     background-color: $brainflix-blue;
     color: $white;

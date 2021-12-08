@@ -22,6 +22,19 @@
     padding: 8px 80px 8px 80px;
   }
 
+  &__container {
+    display: flex;
+    justify-content: center;
+
+    @include tablet {
+      justify-content: flex-start;
+    }
+
+    @include desktop {
+      justify-content: flex-start;
+    }
+  }
+
   &__logo {
     max-width: 120px;
     max-height: 25px;

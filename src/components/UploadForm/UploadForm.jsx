@@ -17,10 +17,13 @@ function UploadForm() {
 
         <div className="uploadform__box">
           <div className="uploadform__avatar"></div>
-          <Link to="/video-upload">Video Upload Page</Link>
-          <button type="submit" className="uploadform__button">
-            UPLOAD
-          </button>
+          <div className="uploadform__button-container">
+            <Link to="/video-upload">
+              <button type="button" className="uploadform__button">
+                UPLOAD
+              </button>
+            </Link>
+          </div>
         </div>
       </form>
     </div>

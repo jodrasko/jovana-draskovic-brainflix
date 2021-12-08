@@ -5,6 +5,8 @@
 @use "../../styles/partials/typography" as *;
 
 .video-item {
+  text-decoration: none;
+  color: $brainflix-black;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
