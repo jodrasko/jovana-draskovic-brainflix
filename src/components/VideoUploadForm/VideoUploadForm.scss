@@ -3,3 +3,247 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/typography" as *;
+
+.publish-form {
+  padding: 1rem;
+  margin: 1rem 0 0 0;
+  border-top: 1px solid $mercury;
+
+  @include tablet {
+    padding: 0 2rem 0 2rem;
+    margin: 0;
+  }
+
+  @include desktop {
+  }
+
+  &__title {
+    font-family: "Avenir-Next";
+    color: $brainflix-black;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    padding: 1rem 0 1rem 0;
+    margin: 0;
+
+    @include tablet {
+      font-size: 33px;
+      line-height: 44px;
+      border-bottom: 1px solid $mercury;
+      padding: 2rem 0 1.5rem 0;
+    }
+
+    @include desktop {
+      font-size: 33px;
+      line-height: 44px;
+      border-bottom: 1px solid $mercury;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include tablet {
+      padding: 1rem 0 0 0;
+    }
+
+    @include desktop {
+    }
+  }
+
+  &__thumbnail {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+
+    @include tablet {
+      width: 50%;
+    }
+
+    @include desktop {
+    }
+  }
+
+  &__input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  &__input {
+    font-family: "Avenir-Next";
+    color: $brainflix-black;
+    background: $alabaster;
+
+    min-width: 15rem;
+    width: 100%;
+    height: 2.25rem;
+    min-height: 2.25rem;
+    border-radius: 0.25rem;
+    border: 1px solid $mercury;
+    padding: 0.75rem;
+
+    @include tablet {
+      padding: 1rem;
+      height: 2.5rem;
+      min-height: 2.5rem;
+    }
+
+    @include desktop {
+      padding: 1rem;
+      height: 2.5rem;
+      min-height: 2.5rem;
+    }
+
+    input:focus::after {
+      border: 1px solid $brainflix-black;
+    }
+
+    input:valid {
+      border: 1px solid $mercury;
+    }
+
+    input:invalid {
+      border: 1px solid #d22d2d;
+    }
+
+    input:required:invalid {
+      border-color: #d22d2d;
+    }
+
+    input:active {
+      border: 2px solid $brainflix-blue;
+    }
+  }
+
+  &__description {
+    font-family: "Avenir-Next";
+    color: $brainflix-black;
+    background: $alabaster;
+
+    min-width: 15rem;
+    width: 100%;
+    height: 5rem;
+    border-radius: 0.25rem;
+    border: 1px solid $mercury;
+    padding: 0.75rem;
+
+    @include tablet {
+      padding: 1rem;
+    }
+
+    @include desktop {
+      padding: 1rem;
+    }
+  }
+
+  &__label {
+    font-family: "Avenir-Next";
+    font-weight: 700;
+    line-height: 1.25rem;
+    font-size: 12px;
+    color: $silver;
+    padding-bottom: 0.25rem;
+    text-align: left;
+    padding-top: 1rem;
+
+    // @include tablet {
+    //   flex-grow: 3;
+    //   font-size: 12px;
+    // }
+    // @include desktop {
+    //   flex-grow: 3;
+    // }
+  }
+
+  ::placeholder {
+    font-family: "Avenir-Next";
+    color: $brainflix-black;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.125rem;
+
+    @include tablet {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.375rem;
+    }
+
+    @include desktop {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.375rem;
+    }
+  }
+
+  &__button-container {
+    border-top: 1px solid $mercury;
+    width: 100%;
+    padding: 1.5rem 0 0 0;
+    margin: 1rem 0 0 0;
+
+    @include tablet {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 1.5rem 0 0 0;
+      padding: 1.5rem 0 0 0;
+    }
+
+    @include desktop {
+    }
+  }
+
+  &__button-colorless {
+    background-color: $white;
+    color: $brainflix-blue;
+    font-weight: 700;
+    height: 2.5rem;
+    border: none;
+    width: 100%;
+    margin: 0;
+    padding: 2.5rem;
+
+    @include tablet {
+      padding: 0 2rem 0 0;
+      min-width: 150px;
+      max-width: 160px;
+    }
+
+    @include desktop {
+      padding: 0;
+      min-width: 150px;
+      max-width: 160px;
+    }
+  }
+
+  &__button {
+    background-color: $brainflix-blue;
+    color: $white;
+    font-weight: 700;
+    height: 2.5rem;
+    border-radius: 0.25rem;
+    border: none;
+    width: 100%;
+    background-image: url(../../assets/images/Icons/publish.svg);
+    background-repeat: no-repeat;
+    background-position: 0.5rem 50%;
+
+    @include tablet {
+      min-width: 150px;
+      max-width: 160px;
+      padding: 0 32px 0 32px;
+    }
+
+    @include desktop {
+      min-width: 150px;
+      max-width: 160px;
+      padding: 0 32px 0 32px;
+    }
+  }
+}
