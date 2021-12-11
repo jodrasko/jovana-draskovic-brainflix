@@ -8,19 +8,23 @@ import PageNotFound from "./components/PageNotFound/PageNotFound";
 class App extends Component {
   render() {
     return (
-      // <div className="App">
-      //   <MainPage />
-      // </div>
       <>
         <BrowserRouter>
           <Switch>
-            <Redirect from="/home" to="/" />
-            <Route path="/" exact={true} component={MainPage} />
-            <Route path="/video-upload" component={VideoUploadPage} />
+            <Redirect from="/" exact={true} to="/home" />
+            <Route path="/home" component={MainPage} />
+            {/* <Route path="/video-upload" component={VideoUploadPage} /> */}
             <Route
-              path="/:videoId"
+              path="/video-upload"
               render={(routerProps) => {
-                console.log("Router Props:", routerProps);
+                // console.log("Router VideoUploadPage Props:", routerProps);
+                return <VideoUploadPage {...routerProps} />;
+              }}
+            />
+            <Route
+              path="/videos/:videoId"
+              render={(routerProps) => {
+                // console.log("Router Props:", routerProps);
                 return <MainPage {...routerProps} />;
               }}
             />

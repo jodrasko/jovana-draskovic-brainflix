@@ -18,7 +18,7 @@ class MainPage extends Component {
   componentDidUpdate(prevProps, prevState) {
     if (this.props !== prevProps) {
       const currentVideoId = this.props.match.params.videoId;
-      console.log("[MainPage] currentVideoId=", currentVideoId);
+      // console.log("[MainPage] currentVideoId=", currentVideoId);
       let currentVideo = detailsData[0];
       if (currentVideoId) {
         currentVideo = detailsData.find((video) => video.id === currentVideoId);
@@ -29,14 +29,8 @@ class MainPage extends Component {
     }
   }
 
-  handleVideoSelect = (id) => {
-    this.setState({
-      selectedVideo: detailsData.find((video) => video.id === id)
-    });
-  };
-
   render() {
-    console.log("MainPage Props:", this.props);
+    // console.log("MainPage Props:", this.props);
 
     const nextVideos = videoData.filter(
       (video) => video.id !== this.state.selectedVideo.id
@@ -45,17 +39,14 @@ class MainPage extends Component {
     return (
       <div>
         <NavigationBar />
-        <VideoPlayer />
+        <VideoPlayer videoImage={this.state.selectedVideo.image} />
         <div className="main">
           <div className="video-details">
             <VideoDetails detail={this.state.selectedVideo} />
             <CommentForm />
             <CommentList comments={this.state.selectedVideo.comments} />
           </div>
-          <VideoList
-            videos={nextVideos}
-            onVideoSelect={this.handleVideoSelect}
-          />
+          <VideoList videos={nextVideos} />
         </div>
       </div>
     );

@@ -1,11 +1,17 @@
 import "./VideoUploadForm.scss";
 import UploadVideoPreview from "../../assets/images/Upload-video-preview.jpg";
 
-function VideoUploadForm() {
+function VideoUploadForm(props) {
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log("upload");
+    props.onSubmit();
+  }
+
   return (
     <section className="publish-form">
       <h2 className="publish-form__title">Upload Video </h2>
-      <form className="publish-form__form">
+      <form className="publish-form__form" onSubmit={handleSubmit}>
         <div className="publish-form__container">
           <div className="publish-form__thumbnail-container">
             <label className="publish-form__label" htmlFor="video-thumbnail">
@@ -53,8 +59,7 @@ function VideoUploadForm() {
           <button type="submit" className="publish-form__button">
             PUBLISH
           </button>
-          {/* </div> */}
-          {/* <div className="publish-form__button-container"> */}
+
           <button type="submit" className="publish-form__button-colorless">
             CANCEL
           </button>
