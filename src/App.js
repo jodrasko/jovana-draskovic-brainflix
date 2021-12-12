@@ -1,8 +1,8 @@
 import { Component } from "react";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
-import "./App.css";
-import MainPage from "./page/MainPage/MainPage";
-import VideoUploadPage from "./page/VideoUploadPage/VideoUploadPage";
+import "./App.scss";
+import MainPage from "./pages/MainPage/MainPage";
+import VideoUploadPage from "./pages/VideoUploadPage/VideoUploadPage";
 
 class App extends Component {
   render() {

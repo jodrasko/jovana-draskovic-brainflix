@@ -1,4 +1,3 @@
-@use "../../styles/partials/global" as *;
 @use "../../styles/partials/colors" as *;
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
@@ -28,6 +27,10 @@
 
   &__button-container {
     width: 100%;
+
+    @include tablet {
+      width: 80%;
+    }
   }
 
   &__button {
@@ -89,6 +92,7 @@
       max-height: 2.5rem;
       width: 2.5rem;
       height: 2.5rem;
+      margin-left: 0.25rem;
     }
   }
 
