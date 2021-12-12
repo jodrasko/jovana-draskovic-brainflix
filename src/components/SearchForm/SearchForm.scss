@@ -4,7 +4,7 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/typography" as *;
 
-.uploadform {
+.search-form {
   &__container {
     @include tablet {
       display: flex;

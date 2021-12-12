@@ -1,6 +1,9 @@
 import "./CommentForm.scss";
 
 function CommentForm() {
+  function handleClick(e) {
+    e.preventDefault();
+  }
   return (
     <section className="conversation">
       <div className="conversation__container">
@@ -19,7 +22,11 @@ function CommentForm() {
             ></textarea>
           </div>
           <div className="comment-form__button-container">
-            <button type="submit" className="comment-form__button">
+            <button
+              type="submit"
+              className="comment-form__button"
+              onClick={handleClick}
+            >
               COMMENT
             </button>
           </div>

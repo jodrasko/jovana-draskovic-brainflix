@@ -1,6 +1,6 @@
 import BrainFlixLogo from "../../assets/images/logo/BrainFlix-logo.svg";
 import "./NavigationBar.scss";
-import UploadForm from "../UploadForm/UploadForm";
+import SearchForm from "../SearchForm/SearchForm";
 import { Link } from "react-router-dom";
 
 function NavigationBar() {
@@ -15,7 +15,7 @@ function NavigationBar() {
           />
         </Link>
       </div>
-      <UploadForm />
+      <SearchForm />
     </header>
   );
 }

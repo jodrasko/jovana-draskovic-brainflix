@@ -8,6 +8,10 @@ function VideoUploadForm(props) {
     props.onSubmit();
   }
 
+  function handleClick(e) {
+    e.preventDefault();
+  }
+
   return (
     <section className="publish-form">
       <h2 className="publish-form__title">Upload Video </h2>
@@ -60,7 +64,11 @@ function VideoUploadForm(props) {
             PUBLISH
           </button>
 
-          <button type="submit" className="publish-form__button-colorless">
+          <button
+            type="submit"
+            className="publish-form__button-colorless"
+            onClick={handleClick}
+          >
             CANCEL
           </button>
         </div>
