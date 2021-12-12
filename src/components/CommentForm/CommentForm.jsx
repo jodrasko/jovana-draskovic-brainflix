@@ -1,5 +1,6 @@
 import "./CommentForm.scss";
 
+// Comment Form Section on Main Page
 function CommentForm() {
   function handleClick(e) {
     e.preventDefault();

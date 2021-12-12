@@ -1,6 +1,7 @@
 import VideoItem from "../VideoItem/VideoItem";
 import "./VideoList.scss";
 
+// List of next videos on Main Page
 const VideoList = (props) => {
   return (
     <section className="next-video">

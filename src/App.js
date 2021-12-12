@@ -4,6 +4,7 @@ import "./App.scss";
 import MainPage from "./pages/MainPage/MainPage";
 import VideoUploadPage from "./pages/VideoUploadPage/VideoUploadPage";
 
+// BrainFlix Application
 class App extends Component {
   render() {
     return (

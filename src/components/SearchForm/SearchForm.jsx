@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import "./SearchForm.scss";
 
+// Search Form Section on the top of all pages
 function SearchForm() {
   return (
     <div className="search-form__container">

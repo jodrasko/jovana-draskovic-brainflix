@@ -1,11 +1,6 @@
 import "./CommentItem.scss";
 
-//{
-//     "name": "Micheal Lyons",
-//     "comment": "They BLEW the ROOF off at their last event, once everyone started figuring out they were going. This is still simply the greatest opening of an event I have EVER witnessed.",
-//     "likes": 0,
-//     "timestamp": 1628522461000
-//   },
+// Comment Item below Comment Form on Main Page
 const CommentItem = (props) => {
   const item = props.comment;
 

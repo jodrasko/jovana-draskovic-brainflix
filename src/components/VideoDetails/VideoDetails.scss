@@ -18,12 +18,12 @@
   &__title {
     font-size: 24px;
     font-weight: 700;
-    line-height: 33px;
+    line-height: 2.063rem;
 
     @include tablet {
       font-size: 33px;
       font-weight: 700;
-      line-height: 44px;
+      line-height: 2.75rem;
       margin: 0;
     }
   }
@@ -65,7 +65,7 @@
 
   &__right {
     display: flex;
-    margin-left: 40px;
+    margin-left: 2.5rem;
     flex-direction: column;
     @include tablet {
       flex-direction: row;
@@ -80,7 +80,7 @@
   &__channel {
     font-size: 13px;
     font-weight: 700;
-    line-height: 18px;
+    line-height: 1.125rem;
     margin: 0 2rem 1rem 0;
 
     @include tablet {
@@ -99,38 +99,35 @@
   &__description {
     font-size: 13px;
     font-weight: 400;
-    line-height: 18px;
+    line-height: 1.125rem;
     color: $brainflix-black;
 
     @include desktop {
       font-size: 14px;
-      line-height: 22px;
+      line-height: 1.375rem;
       margin: 1.5rem 1.5rem 1.5rem 0;
     }
   }
 
   &__heading {
     font-size: 13px;
-    line-height: 18px;
+    line-height: 1.125rem;
     font-weight: 700;
-    margin: 8px 8px 8px 0;
+    margin: 0.5rem 0.5rem 0.5rem 0;
     text-align: left;
 
     @include tablet {
       font-size: 14px;
-      line-height: 22px;
+      line-height: 1.375rem;
       font-weight: 700;
       margin: 0;
     }
 
     @include desktop {
       font-size: 14px;
-      line-height: 22px;
+      line-height: 1.375rem;
       font-weight: 700;
       margin: 2rem 0 0 0;
     }
   }
 }
-
-//border-top: 1px solid $mercury;
-//border-bottom: 1px solid $mercury;

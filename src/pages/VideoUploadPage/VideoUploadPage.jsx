@@ -4,6 +4,7 @@ import "./VideoUploadPage.scss";
 import NavigationBar from "../../components/NavigationBar/NavigationBar";
 import VideoUploadForm from "../../components/VideoUploadForm/VideoUploadForm";
 
+// Video Upload Page
 class VideoUploadPage extends React.Component {
   state = {
     redirectToHome: false

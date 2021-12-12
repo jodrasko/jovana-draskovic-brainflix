@@ -19,11 +19,10 @@ class MainPage extends Component {
   // axios get request function and set response data to state
   getVideos = () => {
     const url = `https://project-2-api.herokuapp.com/videos?api_key=${API_KEY}`;
-    console.log("getVideos url=", url);
+
     axios
       .get(url)
       .then((res) => {
-        console.log(res.data);
         this.setState({
           videos: res.data
         });
@@ -36,11 +35,10 @@ class MainPage extends Component {
   //axios get request function and set response data to state
   getVideoDetails = (id) => {
     const url = `https://project-2-api.herokuapp.com/videos/${id}?api_key=${API_KEY}`;
-    console.log("getVideoDetails url=", url);
+
     axios
       .get(url)
       .then((res) => {
-        console.log(res.data);
         this.setState({
           selectedVideo: res.data
         });
@@ -52,51 +50,49 @@ class MainPage extends Component {
 
   //getting videos from api upon website mount
   componentDidMount() {
-    console.log("[MainPage] componentDidMount");
     //invoking getVideos function to get all videos
     this.getVideos();
   }
 
   componentDidUpdate(prevProps, prevState) {
-    console.log("[MainPage] componentDidUpdate");
-
     if (this.state !== prevState) {
       // this will be called for the first time
       // after this.getVideos() in the componentDidMount() updated state
-      console.log("[MainPage] state change");
+
       //state change will call render() again
       if (!this.state.selectedVideo) {
-        console.log("[MainPage] state change, selected Video not set in state");
-
         const firstElementId = this.state.videos[0].id;
-        console.log("firstElementId=", firstElementId);
         this.getVideoDetails(firstElementId);
       }
     }
     if (this.props !== prevProps) {
       // the next video was clicked
-      console.log("[MainPage] prop change");
       this.getVideoDetails(this.props.match.params.videoId);
     }
   }
 
   render() {
-    console.log("[MainPage] Render Props:", this.props);
     // render only if the selectedVideo is set in state
     const existSelectedVideo = this.state.selectedVideo != null;
-    console.log("[MainPage] selectedVideo in state:", existSelectedVideo);
+
     const nextVideos =
       existSelectedVideo &&
       this.state.videos.filter(
         (video) => video.id !== this.state.selectedVideo.id
       );
+    if (existSelectedVideo) {
+      window.scrollTo(0, 0);
+    }
 
     return (
       <>
         <NavigationBar />
         {existSelectedVideo && (
           <>
-            <VideoPlayer videoImage={this.state.selectedVideo.image} />
+            <VideoPlayer
+              videoImage={this.state.selectedVideo.image}
+              videoUrl={this.state.selectedVideo.video}
+            />
             <div className="main">
               <div className="video-details">
                 <VideoDetails detail={this.state.selectedVideo} />

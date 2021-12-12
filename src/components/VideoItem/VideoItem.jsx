@@ -1,6 +1,7 @@
 import "./VideoItem.scss";
 import { Link } from "react-router-dom";
 
+// A single item on the list of next videos on Main Page
 const VideoItem = (props) => {
   const item = props.video;
 

@@ -12,13 +12,13 @@
   @include tablet {
     flex-direction: row;
     justify-content: space-between;
-    padding: 8px 8px 0 8px;
+    padding: 0.5rem 0.5rem 0 0.5rem;
   }
 
   @include desktop {
     flex-direction: row;
     justify-content: space-between;
-    padding: 8px 80px 8px 80px;
+    padding: 0.5rem 5rem 0.5rem 5rem;
   }
 
   &__container {
@@ -35,12 +35,12 @@
   }
 
   &__logo {
-    max-width: 120px;
-    max-height: 25px;
+    max-width: 7.5rem;
+    max-height: 1.563rem;
     margin: 1rem 0 1rem 0;
 
     @include tablet {
-      margin: 24px 16px 0 16px;
+      margin: 1.5rem 1rem 0 1rem;
     }
   }
 }

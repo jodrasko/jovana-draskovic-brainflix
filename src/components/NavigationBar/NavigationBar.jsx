@@ -3,6 +3,7 @@ import "./NavigationBar.scss";
 import SearchForm from "../SearchForm/SearchForm";
 import { Link } from "react-router-dom";
 
+// Navigation Bar Section on all pages
 function NavigationBar() {
   return (
     <header className="main-header">

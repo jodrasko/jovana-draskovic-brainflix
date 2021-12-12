@@ -1,5 +1,6 @@
 import "./UserImpression.scss";
 
+// An icon and value for likes and views on Main Page
 function UserImpression(props) {
   return (
     <div className="user-impression">

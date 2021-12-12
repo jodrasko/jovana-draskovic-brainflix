@@ -1,6 +1,7 @@
 import "./VideoUploadForm.scss";
 import UploadVideoPreview from "../../assets/images/Upload-video-preview.jpg";
 
+// Video Upload Form on the Video Upload Page
 function VideoUploadForm(props) {
   function handleSubmit(e) {
     e.preventDefault();
