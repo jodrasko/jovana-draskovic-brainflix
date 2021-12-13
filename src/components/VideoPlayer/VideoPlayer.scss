@@ -6,19 +6,42 @@
 .video {
   margin: 1rem 0 1.5rem 0;
   background-color: $brainflix-darkblack;
-
   @include tablet {
     margin: 0;
-    padding: 0 2.5rem 0 2.5rem;
-  }
-
-  @include desktop {
-    margin: 0;
-    padding: 0 5rem 0 5rem;
   }
 
   &__player {
     width: 100%;
     height: auto;
+    max-height: 18vh;
+    @include tablet {
+      max-height: 40vh;
+      margin: 0 2rem 0 2rem;
+      max-width: 92%;
+    }
+    @include desktop {
+      max-height: 50vh;
+      margin: 0 8rem 0 8rem;
+      width: 76%;
+    }
+  }
+
+  &__player[poster] {
+    border: 2px solid $silver;
+    width: 100%;
+    height: auto;
+    max-height: 18vh;
+
+    @include tablet {
+      border: 3px solid $silver;
+      max-height: 40vh;
+      margin: 0 2rem 0 2rem;
+      max-width: 92%;
+    }
+    @include desktop {
+      max-height: 50vh;
+      margin: 0 8rem 0 8rem;
+      max-width: 76%;
+    }
   }
 }
