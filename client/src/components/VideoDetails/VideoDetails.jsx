@@ -1,7 +1,7 @@
 import "./VideoDetails.scss";
 import Views from "../../assets/images/Icons/views.svg";
 import Likes from "../../assets/images/Icons/likes.svg";
-import UserImpression from "../../components/UserImpression/UserImpression";
+import UserImpression from "../UserImpression/UserImpression";
 
 // Video Details of the Main Page
 function VideoDetails(props) {
