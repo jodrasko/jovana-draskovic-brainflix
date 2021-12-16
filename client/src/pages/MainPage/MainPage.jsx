@@ -1,7 +1,7 @@
 import { Component } from "react";
 import axios from "axios";
 import "./MainPage.scss";
-import NavigationBar from "../../components/NavigationBar/NavigationBar";
+// import NavigationBar from "../../components/NavigationBar/NavigationBar";
 import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
 import CommentList from "../../components/CommentList/CommentList";
 import CommentForm from "../../components/CommentForm/CommentForm";
@@ -67,7 +67,9 @@ class MainPage extends Component {
     }
     if (this.props !== prevProps) {
       // the next video was clicked
-      this.getVideoDetails(this.props.match.params.videoId);
+      if (this.props.match.params.videoId) {
+        this.getVideoDetails(this.props.match.params.videoId);
+      }
     }
   }
 
@@ -86,7 +88,7 @@ class MainPage extends Component {
 
     return (
       <>
-        <NavigationBar />
+        {/* <NavigationBar /> */}
         {existSelectedVideo && (
           <>
             <VideoPlayer

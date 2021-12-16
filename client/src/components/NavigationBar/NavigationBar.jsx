@@ -8,7 +8,7 @@ function NavigationBar() {
   return (
     <header className="header">
       <div className="header__logo-box">
-        <Link to="/home">
+        <Link to="/">
           <img
             src={BrainFlixLogo}
             alt="brainflix logo"

@@ -188,6 +188,8 @@
     height: 2.25rem;
     border-radius: 50%;
     background-color: $mercury;
+    object-position: center;
+    object-fit: cover;
 
     @include tablet {
       max-width: 2.5rem;

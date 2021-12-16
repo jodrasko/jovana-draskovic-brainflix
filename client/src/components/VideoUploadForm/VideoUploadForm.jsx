@@ -5,7 +5,7 @@ import UploadVideoPreview from "../../assets/images/Upload-video-preview.jpg";
 function VideoUploadForm(props) {
   function handleSubmit(e) {
     e.preventDefault();
-    console.log("upload");
+    alert("Your video was uploaded successfully.");
     props.onSubmit();
   }
 
@@ -66,7 +66,7 @@ function VideoUploadForm(props) {
           </button>
 
           <button
-            type="submit"
+            type="button"
             className="publish-form__button-colorless"
             onClick={handleClick}
           >

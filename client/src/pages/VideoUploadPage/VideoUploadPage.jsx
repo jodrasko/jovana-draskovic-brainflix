@@ -1,7 +1,7 @@
 import React from "react";
 import { Redirect } from "react-router";
 import "./VideoUploadPage.scss";
-import NavigationBar from "../../components/NavigationBar/NavigationBar";
+// import NavigationBar from "../../components/NavigationBar/NavigationBar";
 import VideoUploadForm from "../../components/VideoUploadForm/VideoUploadForm";
 
 // Video Upload Page
@@ -18,11 +18,11 @@ class VideoUploadPage extends React.Component {
 
   render() {
     if (this.state.redirectToHome) {
-      return <Redirect to="/home" />;
+      return <Redirect to="/" />;
     }
     return (
       <>
-        <NavigationBar />
+        {/* <NavigationBar /> */}
         <VideoUploadForm onSubmit={this.handleSubmit} />
       </>
     );
