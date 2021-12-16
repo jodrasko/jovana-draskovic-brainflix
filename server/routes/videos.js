@@ -69,17 +69,11 @@ videosRouter.get("/:videoId", (req, res) => {
 
 const videoValidation = (req, res, next) => {
   // It's a good idea to setup validation for your endpoints to make sure the data required is sent in a request
-  if (
-    !req.body.title ||
-    !req.body.genres ||
-    !req.body.price ||
-    !req.body.description
-  ) {
+  //{ id, title, channel, image }
+  if (!req.body.title || !req.body.description) {
     return res
       .status(400)
-      .send(
-        "Please make sure to include title, genres, price and description of the game"
-      );
+      .send("Please make sure to include title and description of the video");
   } else {
     next();
   }
@@ -94,9 +88,15 @@ videosRouter.post("/", videoValidation, (req, res) => {
   const newVideo = {
     id: uuid(),
     title: req.body.title,
-    genres: req.body.genres,
-    price: req.body.price,
-    description: req.body.description
+    channel: " ",
+    image: "https://i.imgur.com/l2Xfgpl.jpg",
+    description: req.body.description,
+    views: "100",
+    likes: "50",
+    duration: "2:05",
+    video: "https://project-2-api.herokuapp.com/stream",
+    timestamp: new Date().getTime(),
+    comments: []
   };
 
   // Update our gamesData array and then write the updates to a games data JSON file

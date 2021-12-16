@@ -274,18 +274,5 @@
       }
     ],
     "id": "76ca28c0-7dea-4553-887f-8e5129a80fc3"
-  },
-  {
-    "id": "dbcf16a2-80eb-4cf7-8daf-d4e4ff113118",
-    "title": "Cute Poodle Puppies",
-    "channel": " ",
-    "image": "https://i.imgur.com/l2Xfgpl.jpg",
-    "description": "Cute poodle puppies playing in a park",
-    "views": "100",
-    "likes": "50",
-    "duration": "2:05",
-    "video": "https://project-2-api.herokuapp.com/stream",
-    "timestamp": 1639633514440,
-    "comments": []
   }
 ]
