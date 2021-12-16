@@ -5,10 +5,24 @@ const videosRoutes = require("./routes/videos");
 const miscRoutes = require("./routes/misc");
 // const employeesRoutes = require("./routes/employees");
 
-const app = express();
+// You have to run dotenv.config to make your .env files available
+require("dotenv").config();
 
-// enable cors so that browser can make requests to our server
-app.use(cors());
+// To access .env variables we get them from process global variable
+console.log(process.env.PORT);
+
+// .env should be gitignored so provide .env.sample with the names of the env variables required for the app
+
+const app = express();
+const PORT = process.env.PORT || 5050;
+
+// Need to include CORS middle ware to allow requests from the client
+app.use(
+  cors({
+    origin: process.env.CLIENT_URL
+  })
+);
+app.use(express.json());
 
 // example of simple middleware
 app.use((req, res, next) => {
@@ -35,8 +49,8 @@ app.use("/", miscRoutes);
 // app.use("/employees", employeesRoutes);
 
 // Listen on PORT and provide a success callback function
-app.listen(8080, () => {
-  console.log("🚀 Server listening on 8080");
+app.listen(PORT, () => {
+  console.log(`🚀 Server listening on ${PORT}`);
 });
 
 // Troubleshooting

@@ -5,6 +5,9 @@ import MainPage from "./pages/MainPage/MainPage";
 import VideoUploadPage from "./pages/VideoUploadPage/VideoUploadPage";
 import NavigationBar from "./components/NavigationBar/NavigationBar";
 
+// In React env variables need to be prepended with REACT_APP_
+console.log("API_URL", process.env.REACT_APP_API_URL);
+
 // BrainFlix Application
 class App extends Component {
   render() {
