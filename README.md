@@ -28,7 +28,7 @@ Open a second terminal for the client.
 
 If you are in the server directory, you need to run:
 
-### 'cd ..'
+### `cd ..`
 
 To get to the project directory.
 
