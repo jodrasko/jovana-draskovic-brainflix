@@ -4,7 +4,7 @@ import axios from "axios";
 
 // Video Upload Form on the Video Upload Page
 function VideoUploadForm(props) {
-  function handleSubmit(e) {
+  function handleFormSubmit(e) {
     e.preventDefault();
     axios
       .post(`${process.env.REACT_APP_API_URL}/videos`, {
@@ -12,25 +12,24 @@ function VideoUploadForm(props) {
         description: e.target.description.value
       })
       .then(function (response) {
-        console.log(response);
         alert("Your video was uploaded successfully.");
+        props.onSubmit();
       })
       .catch(function (error) {
         console.log(error);
         alert("Error: video was not uploaded.");
       });
-
-    props.onSubmit();
   }
 
   function handleClick(e) {
     e.preventDefault();
+    props.onSubmit();
   }
 
   return (
     <section className="publish-form">
       <h2 className="publish-form__title">Upload Video </h2>
-      <form className="publish-form__form" onSubmit={handleSubmit}>
+      <form className="publish-form__form" onSubmit={handleFormSubmit}>
         <div className="publish-form__container">
           <div className="publish-form__thumbnail-container">
             <label className="publish-form__label" htmlFor="video-thumbnail">

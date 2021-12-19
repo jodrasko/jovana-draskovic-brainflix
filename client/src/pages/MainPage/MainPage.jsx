@@ -1,13 +1,11 @@
 import { Component } from "react";
 import axios from "axios";
 import "./MainPage.scss";
-// import NavigationBar from "../../components/NavigationBar/NavigationBar";
 import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
 import CommentList from "../../components/CommentList/CommentList";
 import CommentForm from "../../components/CommentForm/CommentForm";
 import VideoDetails from "../../components/VideoDetails/VideoDetails";
 import VideoList from "../../components/VideoList/VideoList";
-// const API_KEY = "0f7f483e-637d-4da3-9386-7caa79ef5384";
 
 // Home Page and Video Details Page
 class MainPage extends Component {
@@ -16,10 +14,8 @@ class MainPage extends Component {
     selectedVideo: null
   };
 
-  // axios get request function and set response data to state
   getVideos = () => {
     const url = `${process.env.REACT_APP_API_URL}/videos`;
-    //https://project-2-api.herokuapp.com/videos?api_key=${API_KEY}
 
     axios
       .get(url)
@@ -33,10 +29,9 @@ class MainPage extends Component {
       });
   };
 
-  //axios get request function and set response data to state
   getVideoDetails = (id) => {
     const url = `${process.env.REACT_APP_API_URL}/videos/${id}`;
-    //`https://project-2-api.herokuapp.com/videos/${id}?api_key=${API_KEY}`
+
     axios
       .get(url)
       .then((res) => {
@@ -49,9 +44,9 @@ class MainPage extends Component {
       });
   };
 
-  //getting videos from api upon website mount
+  // getting videos from api upon website mount
   componentDidMount() {
-    //invoking getVideos function to get all videos
+    // invoking getVideos function to get all videos
     this.getVideos();
   }
 
@@ -60,7 +55,7 @@ class MainPage extends Component {
       // this will be called for the first time
       // after this.getVideos() in the componentDidMount() updated state
 
-      //state change will call render() again
+      // state change will call render() again
       if (!this.state.selectedVideo) {
         const firstElementId = this.state.videos[0].id;
         this.getVideoDetails(firstElementId);
@@ -89,7 +84,6 @@ class MainPage extends Component {
 
     return (
       <>
-        {/* <NavigationBar /> */}
         {existSelectedVideo && (
           <>
             <VideoPlayer

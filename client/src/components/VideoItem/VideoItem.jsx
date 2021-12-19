@@ -8,8 +8,7 @@ const VideoItem = (props) => {
   const videoImage = item.image.includes("http")
     ? item.image
     : `${process.env.REACT_APP_API_URL}/${item.image}`;
-  console.log("item.image =", item.image);
-  console.log("videoImage =", videoImage);
+
   return (
     <li>
       <Link to={`/videos/${item.id}`} className="video-item">
