@@ -6,7 +6,7 @@ const videosRouter = Router();
 
 // A helper function to read a data JSON file
 const readData = () => {
-  // The readFileSync path is relative to where server.js file is
+  // The readFileSync path is relative to where index.js file is
   const videosData = fs.readFileSync("./data/videos.json");
   return JSON.parse(videosData);
 };
@@ -24,17 +24,6 @@ const writeFile = (videosData) => {
 videosRouter.get("/", (req, res) => {
   const videosData = readData();
 
-  //   // req.query allows us access to URL query parameters, ie: /games?genre=RPG&dateReleased=2020 as an object
-  //   const queryParams = req.query;
-  //   let newVideosData = [...videosData];
-
-  //   if (queryParams.genre) {
-  //     // Filter out gamesData array to only include the games with a genre in query parameter
-  //     newVideosData = videosData.filter((game) => {
-  //       return game.genres.includes(queryParams.genre);
-  //     });
-  //   }
-
   // {
   //     "id": "84e96018-4022-434e-80bf-000ce4cd12b8",
   //     "title": "BMX Rampage: 2021 Highlights",
@@ -43,16 +32,13 @@ videosRouter.get("/", (req, res) => {
   //   },
 
   let newVideosData = videosData.map((video) => {
-    // Here we are using a rest parameter to remove some of the keys from the game object, which is common for GET all requests, to return limited data
     const { id, title, channel, image } = video;
     return { id, title, channel, image };
   });
-
-  // Only single response per request can be sent, it will throw an error otherwise
   res.status(200).json(newVideosData);
 });
 
-// Fetching a single game details: GET /games/:gameId
+// Fetching a single video details: GET /videos/:videoId
 videosRouter.get("/:videoId", (req, res) => {
   const videosData = readData();
 
@@ -88,8 +74,8 @@ videosRouter.post("/", videoValidation, (req, res) => {
   const newVideo = {
     id: uuid(),
     title: req.body.title,
-    channel: " ",
-    image: "https://i.imgur.com/l2Xfgpl.jpg",
+    channel: "Unknown",
+    image: "blue-image-placeholder.jpg",
     description: req.body.description,
     views: "100",
     likes: "50",

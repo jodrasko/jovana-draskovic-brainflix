@@ -1,11 +1,25 @@
 import "./VideoUploadForm.scss";
 import UploadVideoPreview from "../../assets/images/Upload-video-preview.jpg";
+import axios from "axios";
 
 // Video Upload Form on the Video Upload Page
 function VideoUploadForm(props) {
   function handleSubmit(e) {
     e.preventDefault();
-    alert("Your video was uploaded successfully.");
+    axios
+      .post(`${process.env.REACT_APP_API_URL}/videos`, {
+        title: e.target.title.value,
+        description: e.target.description.value
+      })
+      .then(function (response) {
+        console.log(response);
+        alert("Your video was uploaded successfully.");
+      })
+      .catch(function (error) {
+        console.log(error);
+        alert("Error: video was not uploaded.");
+      });
+
     props.onSubmit();
   }
 

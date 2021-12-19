@@ -3,7 +3,6 @@ const express = require("express");
 const cors = require("cors");
 const videosRoutes = require("./routes/videos");
 const miscRoutes = require("./routes/misc");
-// const employeesRoutes = require("./routes/employees");
 
 // You have to run dotenv.config to make your .env files available
 require("dotenv").config();
@@ -12,7 +11,6 @@ require("dotenv").config();
 console.log(process.env.PORT);
 
 // .env should be gitignored so provide .env.sample with the names of the env variables required for the app
-
 const app = express();
 const PORT = process.env.PORT || 5050;
 
@@ -22,16 +20,8 @@ app.use(
     origin: process.env.CLIENT_URL
   })
 );
-app.use(express.json());
 
 // example of simple middleware
-app.use((req, res, next) => {
-  console.log("Incoming request!");
-  // we could stop all requests here if we wanted to
-  // res.send("You shall not pass!");
-  next();
-});
-
 app.use((req, res, next) => {
   console.log(`${req.method} request to ${req.path}`);
   next();
@@ -45,8 +35,6 @@ app.use(express.json());
 
 app.use("/videos", videosRoutes);
 app.use("/", miscRoutes);
-// for example we could also have employee routes
-// app.use("/employees", employeesRoutes);
 
 // Listen on PORT and provide a success callback function
 app.listen(PORT, () => {

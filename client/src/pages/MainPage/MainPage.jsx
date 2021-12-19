@@ -7,7 +7,7 @@ import CommentList from "../../components/CommentList/CommentList";
 import CommentForm from "../../components/CommentForm/CommentForm";
 import VideoDetails from "../../components/VideoDetails/VideoDetails";
 import VideoList from "../../components/VideoList/VideoList";
-const API_KEY = "0f7f483e-637d-4da3-9386-7caa79ef5384";
+// const API_KEY = "0f7f483e-637d-4da3-9386-7caa79ef5384";
 
 // Home Page and Video Details Page
 class MainPage extends Component {
@@ -18,7 +18,8 @@ class MainPage extends Component {
 
   // axios get request function and set response data to state
   getVideos = () => {
-    const url = `https://project-2-api.herokuapp.com/videos?api_key=${API_KEY}`;
+    const url = `${process.env.REACT_APP_API_URL}/videos`;
+    //https://project-2-api.herokuapp.com/videos?api_key=${API_KEY}
 
     axios
       .get(url)
@@ -34,8 +35,8 @@ class MainPage extends Component {
 
   //axios get request function and set response data to state
   getVideoDetails = (id) => {
-    const url = `https://project-2-api.herokuapp.com/videos/${id}?api_key=${API_KEY}`;
-
+    const url = `${process.env.REACT_APP_API_URL}/videos/${id}`;
+    //`https://project-2-api.herokuapp.com/videos/${id}?api_key=${API_KEY}`
     axios
       .get(url)
       .then((res) => {

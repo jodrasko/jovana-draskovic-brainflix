@@ -5,12 +5,17 @@ import { Link } from "react-router-dom";
 const VideoItem = (props) => {
   const item = props.video;
 
+  const videoImage = item.image.includes("http")
+    ? item.image
+    : `${process.env.REACT_APP_API_URL}/${item.image}`;
+  console.log("item.image =", item.image);
+  console.log("videoImage =", videoImage);
   return (
     <li>
       <Link to={`/videos/${item.id}`} className="video-item">
         <div className="video-item__image-box">
           <img
-            src={item.image}
+            src={videoImage}
             alt={item.title}
             className="video-item__image"
           />
